@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>صفحه کاربری</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            
+    </head>
+
+    <body>
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                    {% if user.is_authenticated %} 
+                    <li><a href="/">خانه</a></li>
+                    <li><a href="/portal/logout">خروج</a></li>
+                    {% endif %}       
+            </ul>
+            <h4 style="position: relative; top: 10px; left: 588px; width: 1200px; height: 70px;">به صفحه کاربری خود خوش آمدید</h4>
+            <h3 style="position: absolute; top: 150px; right: 200px; color:black"> 
+              لطفا برای ایجاد صفحه شامل رزومه خود پرداخت را انجام دهید
+            </h3>               
+              <div class="container">
+                <a href="/zarinpal/request" style="position: absolute; top: 175px; left:290px; color:black" class="btn btn-info" role="button">پرداخت</a>
+              </div>  
+    </body>
+</html>
+

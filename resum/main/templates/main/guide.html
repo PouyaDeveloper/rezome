@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>راهنما</title>
+            <meta charset="utf-8">
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+            <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}" />
+            <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" />
+            <link rel="stylesheet" href="{% static 'main/css/templatemo-style.css' %}" />
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background: #dddddd
+                  }
+                  
+            li {
+                float: right;
+                  }
+                  
+            li a {
+                display: block;
+                padding: 13px;
+                background-color: #dddddd;
+                  }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="/">خانه</a></li>
+            <li><a href="contact">تماس با ما</a></li>
+            <li><a href="guide">راهنما</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="portal/logout">خروج</a></li>
+            <li><a href="portal/user">صفحه کاربری</a></li>
+            {% else %}
+            <li><a href="portal/register">ثبت نام</a></li>
+            <li><a href="portal/login">ورود</a></li>
+            {% endif %}
+        </ul> 
+        <p style="color:#111; position: relative; left: 300px; top: 45px">لطفا مراحل
+             زیر را به ترتیب انجام دهید تا رزومه تان در یک صفحه در اینترنت با آدرس
+              تصادفی بار گذاری شود
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+            ۱- ابتدا به منوی بالا رفته و دکمه ثبت نام را بفشارید
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+                ۲- بعد از ثبت نام دکمه ورود را بزنید و وارد صفحه کاربری خود شوید
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+                ۳- در صفحه کاربری خود دکمه پرداخت را بزنید و هزینه ده هزار تومانی را 
+                پرداخت کنید
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+                ۴- اگر در مرحله قبل پرداخت موفقیت آمیز بود به صفحه ای میروید و به شما ووچر می دهد
+                شماره ووچر را یادداشت و نزد خود نگه دارید و سپس دکمه ادامه را بزنید
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+                ۵- در صفحه بعد ایمیلی که می خواهید به آن ایمیل دیده شدن رزومه تان ارسال 
+                شود وارد کنید و رزومه تان را آپلود و شماره ووچر خود را وارد کنید و دکمه آپلود
+                 را بزنید
+        </p>
+        <p style="position: relative; color:#111; direction: rtl; right: 30px; text-align: right; top: 55px;">
+                ۶- در صفحه بعد رزومه تان بار گذاری شده است و می توانید دانلود کنید. آدرس
+                 این صفجه را یادداشت کنید. هر کس این صفحه را ببیند یک ایمل با آی پی ببننده
+                 به شما<br> ارسال می شود. لازم به ذکر است که آدرس این صفحه قابل بازیابی
+                 نیست. در حفظ آن کوشا باشید
+        </p>
+    </body>
+    </html>

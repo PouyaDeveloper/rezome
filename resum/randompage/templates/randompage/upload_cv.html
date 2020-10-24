@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            آپلود رزومه
+        </title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+            <script type="text/javascript">
+            function preventBack(){ window.history.forward();}
+            setTimeout("preventBack()",0);
+            window.onunload = function(){ null };
+            
+        </script>
+        
+    </head>
+    <body>
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                    {% if user.is_authenticated %} 
+                    <li><a href="/">خانه</a></li>
+                    <li><a href="/portal/logout">خروج</a></li>
+                    {% endif %}       
+            </ul>
+            
+            <div><p>{{ statement }}</p></div>
+            
+
+        <h2> آپلود رزومه </h2> 
+        
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %} 
+            {{form.as_p}}
+            <input type="text" name="secure" placeholder="Enter your vocher"><br>
+            <button type="submit" class="btn btn-primary">آپلود</button>
+        </form> 
+    
+    </body>
+</html>
